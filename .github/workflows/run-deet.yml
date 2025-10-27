@@ -28,5 +28,5 @@ jobs:
         id: hello
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: ShaneHoughton/deets@new-0
+        uses: ShaneHoughton/deets@new-1
         
