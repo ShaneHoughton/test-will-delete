@@ -26,12 +26,12 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: ShaneHoughton/deets@0
+        uses: ShaneHoughton/deets@1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload file artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-output-file
-          path: 'CHANGELOG.md'
+          path: ${{ steps.hello.outputs.filePath }}
         
