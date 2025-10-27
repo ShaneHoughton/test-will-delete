@@ -1,23 +1,22 @@
 on:
   workflow_dispatch:
-
-inputs:
-  start-date:
-    description: date to start from
-    required: false
-    default: null
-  end-date:
-    description: date to end at
-    required: false
-    default: null
-  timezone:
-    description: timezone
-    required: false
-    default: null
-  file-output-name:
-    description: name of outputted markdown file
-    required: false
-    default: 'CHANGELOG.md'
+    inputs:
+      start-date:
+        description: date to start from
+        required: false
+        default: null
+      end-date:
+        description: date to end at
+        required: false
+        default: null
+      timezone:
+        description: timezone
+        required: false
+        default: null
+      file-output-name:
+        description: name of outputted markdown file
+        required: false
+        default: 'CHANGELOG.md'
 
 jobs:
   print_deets_job:
