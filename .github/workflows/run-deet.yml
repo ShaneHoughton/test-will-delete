@@ -26,5 +26,5 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: ShaneHoughton/deets@beta
+        uses: ShaneHoughton/deets@test
 
