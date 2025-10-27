@@ -16,7 +16,7 @@ on:
       file-output-name:
         description: name of outputted markdown file
         required: false
-        default: 'CHANGELOG.md'
+        default: 'CHANGELOG'
 
 jobs:
   print_deets_job:
