@@ -27,6 +27,6 @@ jobs:
       - name: Hello world action step
         id: hello
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: ShaneHoughton/deets@new-1
         
