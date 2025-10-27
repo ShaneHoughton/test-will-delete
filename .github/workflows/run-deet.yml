@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: ShaneHoughton/deets@new-2
+        uses: ShaneHoughton/deets@new-3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
         
