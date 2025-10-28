@@ -1,18 +1,14 @@
 on:
   workflow_dispatch:
     inputs:
-      start-date:
-        description: date to start from
+      days-back:
+        description: num days to look back at
         required: false
-        default: null
-      end-date:
-        description: date to end at
-        required: false
-        default: null
+        default: '14'
       timezone:
         description: timezone
         required: false
-        default: null
+        default: 'utc'
       file-output-name:
         description: name of outputted markdown file
         required: false
@@ -20,18 +16,19 @@ on:
 
 jobs:
   print_deets_job:
-    name: Deet job
+    name: Deets job
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: create change log
+        id: deets
         uses: ShaneHoughton/deets@v0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
       - name: Upload file artifact
         uses: actions/upload-artifact@v4
         with:
           name: my-output-file
-          path: ${{ steps.hello.outputs.filePath }}
+          path: ${{ steps.deets.outputs.filePath }}
         
