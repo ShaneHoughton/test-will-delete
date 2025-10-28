@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: create change log
         id: deets
-        uses: ShaneHoughton/deets@v0
+        uses: ShaneHoughton/deets@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
